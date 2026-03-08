@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 21, 2025, 3:54:56 PM
+    Author     : Nguyen Hoang Thai Vinh - CE190384
+*/
+
+.cart-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.cart-buttons .btn {
+    margin-right: 10px;
+}

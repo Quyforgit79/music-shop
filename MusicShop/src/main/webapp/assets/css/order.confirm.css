@@ -1,0 +1,215 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 1, 2025, 4:47:51 PM
+    Author     : Nguyen Hoang Thai Vinh - CE190384
+*/
+
+body {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.musicshop-buy-container {
+    max-width: 700px;
+    margin: 48px auto;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    overflow: hidden;
+}
+.musicshop-header {
+    color: #ffffff;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.musicshop-section {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1.5rem 2.5rem;
+    background: #ffffff;
+}
+.musicshop-section:last-child {
+    border-bottom: none;
+}
+.musicshop-section-title {
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+.musicshop-address {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.musicshop-address strong {
+    color: #333333;
+}
+.musicshop-address .btn {
+    min-width: 140px;
+    margin-left: 6px;
+}
+.musicshop-product-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px dashed #d1d1d1;
+    padding: 1.1rem 0;
+}
+.musicshop-product-row:last-child {
+    border-bottom: none;
+}
+.musicshop-product-row img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1.5px solid #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.musicshop-product-info {
+    flex: 1;
+}
+.musicshop-product-name {
+    font-weight: bold;
+    font-size: 1.13rem;
+    color: #333333;
+}
+.musicshop-product-attr {
+    font-size: 1rem;
+    color: #555555;
+    margin-top: 2px;
+}
+.musicshop-product-price {
+    color: #ff0505;
+    font-weight: bold;
+    font-size: 1.13rem;
+}
+.musicshop-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    font-size: 1.07rem;
+}
+.musicshop-summary-row.total {
+    font-weight: bold;
+    font-size: 1.18rem;
+}
+.musicshop-summary-row.total span:last-child {
+    color: #ff0000;
+}
+.musicshop-btn-order {
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.18rem;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    margin: 2.2rem 0 0 0;
+    padding: 0.9rem 0;
+    transition: background 0.2s, box-shadow 0.2s;
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+.btn-outline-primary {
+    color: #333333;
+    border-color: #333333;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+.btn-outline-secondary {
+    color: #555555;
+    border-color: #555555;
+}
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+    background: #555555;
+    color: #ffffff;
+    border-color: #555555;
+}
+.btn-warning {
+    background: #f5f5f5;
+    color: #333333;
+    border: none;
+}
+.btn-warning:hover, .btn-warning:focus {
+    background: #333333;
+    color: #ffffff;
+}
+.form-select:focus, .form-control:focus {
+    border-color: #333333;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.10);
+}
+.badge.bg-light.text-dark {
+    background: #f5f5f5 !important;
+    color: #333333 !important;
+}
+#voucherSelect:focus {
+    border-color: #333333;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.10);
+}
+.modal-content {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+}
+.modal-header {
+    background: #f5f5f5;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.modal-title {
+    color: #333333;
+    font-weight: 700;
+}
+.list-group-item-action {
+    border-radius: 8px !important;
+    margin-bottom: 6px;
+    border: 1px solid #e5e5e5;
+    transition: background 0.15s, color 0.15s;
+}
+.list-group-item-action:hover, .list-group-item-action:focus {
+    background: #f5f5f5;
+    color: #333333;
+}
+@media (max-width: 600px) {
+    .musicshop-buy-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .musicshop-header, .musicshop-section {
+        padding: 1rem !important;
+    }
+    .musicshop-btn-order {
+        margin: 1rem !important;
+    }
+    .musicshop-address {
+        padding: 0.7rem 1rem;
+    }
+    .musicshop-product-row img {
+        width: 60px;
+        height: 60px;
+    }
+}

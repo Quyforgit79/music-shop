@@ -1,0 +1,317 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 19, 2025, 4:35:06 PM
+    Author     : Nguyen Hoang Thai Vinh - CE190384
+*/
+:root {
+    --primary: #8b5cf6;
+    --primary-dark: #6d28d9;
+    --light: #f8fafc;
+    --gray: #e5e7eb;
+    --accent: #ffe066;
+}
+
+body {
+    background: var(--light);
+    color: #222;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    opacity: 0.5;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero .btn {
+    background: var(--accent);
+    color: var(--primary-dark);
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.category-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.15);
+}
+
+.category-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    filter: drop-shadow(0 2px 6px rgba(139, 92, 246, 0.2));
+}
+
+.home-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+}
+
+.home-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.home-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.home-card-text {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.home-card-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.home-card-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.home-card-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray);
+    margin: 0 6px;
+}
+
+.carousel-indicators .active {
+    background: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .category-card {
+        margin-bottom: 1rem;
+    }
+
+    .home-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.card-img-top {
+    object-fit: contain;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10; /* quan trọng */
+}
+
+.category-card:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-title {
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+    text-align: center;
+    z-index: 11; /* chữ luôn trên overlay */
+}
+
+.category-card:hover .category-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.intro-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeInScale 2s ease-in-out;
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: 700;
+    animation: slideUp 1s ease-in-out;
+}
+
+.intro-text {
+    font-size: 1.25rem;
+    animation: slideUp 1.2s ease-in-out;
+}
+
+.intro-btn {
+    transition: background-color 0.3s, transform 0.3s;
+    animation: slideUp 1.4s ease-in-out;
+}
+
+.intro-btn:hover {
+    background-color: #0d6efd;
+    transform: scale(1.1);
+}
+
+.video-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Above video, below overlay */
+    pointer-events: none; /* Prevent interaction with video */
+}
+
+@media (max-width: 767px) {
+    .intro-section {
+        min-height: 300px;
+    }
+    .intro-title {
+        font-size: 2rem;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

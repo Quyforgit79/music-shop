@@ -1,0 +1,36 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 21, 2025, 3:20:34 PM
+    Author     : Nguyen Hoang Thai Vinh - CE190384
+*/
+
+/* ===== HEADER / NAVBAR ===== */
+.navbar {
+    background: var(--primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: top 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-toggler {
+    color: #fff !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+    color: #ffe066 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
